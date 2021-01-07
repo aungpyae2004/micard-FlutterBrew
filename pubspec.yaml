@@ -1,0 +1,56 @@
+name: my_app
+description: A new Flutter application.
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  qr_flutter: ^3.1.0
+  barcode_flutter: ^1.1.2
+
+
+  cupertino_icons: ^1.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - images/One Piece.jpg
+
+  fonts:
+
+  - family: Nanum Gothic
+    fonts:
+    - asset: fonts/NanumGothic-Regular.ttf
+
+  - family: Fredericka the Great
+    fonts:
+    - asset: fonts/FrederickatheGreat-Regular.ttf
+
+  - family: Cinzel
+    fonts:
+    - asset: fonts/Cinzel-VariableFont_wght.ttf
+
+  - family: Damion
+    fonts:
+    - asset: fonts/Damion-Regular.ttf
+
+  - family: Xanh Mono
+    fonts:
+    - asset: fonts/XanhMono-Regular.ttf
+
+
+
+
