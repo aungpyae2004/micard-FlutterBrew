@@ -11,8 +11,6 @@ dependencies:
   flutter:
     sdk: flutter
   qr_flutter: ^3.1.0
-  barcode_flutter: ^1.1.2
-
 
   cupertino_icons: ^1.0.1
 
@@ -27,29 +25,19 @@ flutter:
 
   uses-material-design: true
   assets:
-    - images/One Piece.jpg
+    - images/image1.jpg
 
   fonts:
 
-  - family: Nanum Gothic
+  - family: Source Sans Pro
     fonts:
-    - asset: fonts/NanumGothic-Regular.ttf
+    - asset: fonts/SourceSansPro-Regular.ttf
 
-  - family: Fredericka the Great
+  - family: Source Sans Pro Semi
     fonts:
-    - asset: fonts/FrederickatheGreat-Regular.ttf
+    - asset: fonts/SourceSansPro-SemiBold.ttf
 
-  - family: Cinzel
-    fonts:
-    - asset: fonts/Cinzel-VariableFont_wght.ttf
 
-  - family: Damion
-    fonts:
-    - asset: fonts/Damion-Regular.ttf
-
-  - family: Xanh Mono
-    fonts:
-    - asset: fonts/XanhMono-Regular.ttf
 
 
 

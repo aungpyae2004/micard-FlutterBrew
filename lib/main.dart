@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'package:barcode_flutter/barcode_flutter.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,121 +11,216 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Colors.brown,
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Card(
-                color: Colors.blueGrey,
+              Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.fromLTRB(
+                      20.0,
+                      10.0,
+                      1.0,
+                      0.0,
+                    ),
+                    child: Text(
+                      "Flutter",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25.0,
+                        fontFamily: "Source Sans Pro Semi",
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(
+                  50.0,
+                  1.0,
+                  1.0,
+                  20.0,
+                ),
+                child: Text(
+                  "Team",
+                  style: TextStyle(
+                    color: Colors.black54,
+                    fontSize: 20.0,
+                    fontFamily: "Source Sans Pro",
+                  ),
+                ),
+              ),
+              Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.fromLTRB(
+                      50.0,
+                      0.0,
+                      0.0,
+                      0.0,
+                    ),
+                    child: CircleAvatar(
+                      radius: 75.0,
+                      backgroundColor: Colors.black38,
+                      child: CircleAvatar(
+                        radius: 70.0,
+                        backgroundImage: AssetImage(
+                          'images/image1.jpg',
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.fromLTRB(0.0, 0.0, 50.0, 3.0),
+                    child: QrImage(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.black,
+                      size: 100.0,
+                      data: "aungPyae's ID card",
+                      version: QrVersions.auto,
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                    padding: EdgeInsets.fromLTRB(
+                      0.0,
+                      0.0,
+                      70.0,
+                      3.0,
+                    ),
+                    child: Text(
+                      "John",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 25.0,
+                        fontFamily: "Source Sans Pro Semi",
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                    padding: EdgeInsets.fromLTRB(
+                      0.0,
+                      0.0,
+                      20.0,
+                      0.0,
+                    ),
+                    child: Text(
+                      "FLUTTER DEVELOPER",
+                      style: TextStyle(
+                        color: Colors.grey[500],
+                        fontSize: 15.0,
+                        fontFamily: "Source Sans Pro",
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 2.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                padding: EdgeInsets.fromLTRB(
+                  0.0,
+                  50.0,
+                  55.0,
+                  10.0,
+                ),
                 child: Row(
-                  children: <Widget>[
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Icon(
+                      Icons.phone,
+                    ),
                     SizedBox(
                       width: 20.0,
                     ),
-                    Icon(
-                      Icons.wb_cloudy_rounded,
-                      color: Colors.black38,
-                      size: 50.0,
-                    ),
-                    SizedBox(
-                      width: 30.0,
-                    ),
                     Text(
-                      "LONDON APP BREWERY",
+                      "+1 234 567 978",
                       style: TextStyle(
-                        letterSpacing: 1.0,
+                        color: Colors.grey[500],
                         fontSize: 20.0,
+                        fontFamily: "Source Sans Pro",
                         fontWeight: FontWeight.bold,
-                        fontFamily: "Fredericka the Great",
+                        letterSpacing: 1.0,
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
-                height: 10.0,
-                width: 300.0,
-                child: Divider(
-                  color: Colors.blueGrey,
+              Container(
+                padding: EdgeInsets.fromLTRB(
+                  0.0,
+                  0.0,
+                  50.0,
+                  10.0,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Icon(
+                      Icons.mail,
+                    ),
+                    SizedBox(
+                      width: 20.0,
+                    ),
+                    Text(
+                      "5911@abc.com",
+                      style: TextStyle(
+                        color: Colors.grey[500],
+                        fontSize: 20.0,
+                        fontFamily: "Source Sans Pro",
+                        letterSpacing: 1.0,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Container(
-                color: Colors.blueGrey,
-                child: Text(
-                  "FLUTTER COMMUNITY",
-                  style: TextStyle(
-                    fontFamily: "Cinzel",
-                    fontSize: 20.0,
-                    color: Colors.white,
-                    letterSpacing: 8.0,
-                  ),
+                padding: EdgeInsets.fromLTRB(
+                  0.0,
+                  0.0,
+                  155.0,
+                  0.0,
                 ),
-              ),
-              SizedBox(
-                height: 70.0,
-              ),
-              CircleAvatar(
-                radius: 50.0,
-                backgroundImage: AssetImage('images/One Piece.jpg'),
-              ),
-              SizedBox(
-                height: 10.0,
-              ),
-              Text(
-                "aungPyae",
-                style: TextStyle(
-                  fontSize: 30.0,
-                  fontFamily: "Fredericka the Great",
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                "Flutter Developer",
-                style: TextStyle(
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "Damion",
-                  letterSpacing: 3.0,
-                ),
-              ),
-              SizedBox(child: ),
-              Card(
-                color: Colors.white,
-                child: ListTile(
-                  leading: Icon(
-                    Icons.phone,
-                    color: Colors.black,
-                  ),
-                  title: Text(
-                    "+1 202 555 0148",
-                    style: TextStyle(
-                      fontFamily: "Nanum Gothic",
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Icon(
+                      Icons.attach_money,
                     ),
-                  ),
-                ),
-              ),
-              Card(
-                color: Colors.white,
-                child: ListTile(
-                  leading: Icon(
-                    Icons.mail,
-                    color: Colors.black,
-                  ),
-                  title: Text(
-                    "workingwithaung@gmail.com",
-                    style: TextStyle(
-                      fontFamily: "Nanum Gothic",
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
+                    SizedBox(
+                      width: 20.0,
                     ),
-                  ),
+                    Text(
+                      "200",
+                      style: TextStyle(
+                        color: Colors.grey[500],
+                        fontSize: 20.0,
+                        fontFamily: "Source Sans Pro",
+                        letterSpacing: 1.0,
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
+              )
             ],
           ),
         ),
