@@ -1,1 +1,3 @@
-This is a ID card software.
+#This is first flutter project.
+
+mi_card version is here #
